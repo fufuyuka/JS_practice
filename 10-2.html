@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>CSSによる表示エリアの切り替え</title>
+  <link rel="stylesheet" type="text/css" href="10-2.css">
+  
+  <script>
+    function showIppan() {
+      document.getElementById("ippan_area").className = "active";
+      document.getElementById("hojin_area").className = "passive";
+    }
+    function showHojin() {
+      document.getElementById("ippan_area").className = "passive";
+      document.getElementById("hojin_area").className = "active";
+    }
+  </script>
+  
+</head>
+
+<body>
+  
+</body>
+</html>
