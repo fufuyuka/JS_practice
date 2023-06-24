@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>CSSによる表示エリアの切り替え</title>
-  <link rel="stylesheet" type="text/css" href="10-2.css">
+  <head>
+    <meta charset="UTF-8">
+    <title>CSSによる表示エリアの切り替え</title>
+    <link rel="stylesheet" type="text/css" href="10-2.css">
+    
+    <script>
+      function showIppan() {
+        document.getElementById("ippan_area").className = "active";
+        document.getElementById("hojin_area").className = "passive";
+      }
+      function showHojin() {
+        document.getElementById("ippan_area").className = "passive";
+        document.getElementById("hojin_area").className = "active";
+      }
+    </script>
+    
+  </head>
   
-  <script>
-    function showIppan() {
-      document.getElementById("ippan_area").className = "active";
-      document.getElementById("hojin_area").className = "passive";
-    }
-    function showHojin() {
-      document.getElementById("ippan_area").className = "passive";
-      document.getElementById("hojin_area").className = "active";
-    }
-  </script>
-  
-</head>
-
-<body>
-  
-</body>
+  <body>
+    <input type="radio" name="target" value="i" onchange="showIppan();" checked>一般用
+    <input type="radio" name="target" value="ｈ" onchange="showHojin();" checked>法人用
+    <ul id="ippan_area" classs="active">
+      <li>氏名<iput type="text" name="name"></li>
+      <li>住所<iput type="text" name="address"></li>
+      <li>電話番号<iput type="text" name="tel"></li>
+    </ul>
+    <ul id="hojin_area" classs="passive">
+      <li>会社名<iput type="text" name="company"></li>
+      <li>部署名<iput type="text" name="busho"></li>
+      <li>担当者名<iput type="text" name="tanto"></li>
+      <li>住所<iput type="text" name="address"></li>
+      <li>電話番号<iput type="text" name="tel"></li>
+      <li>内線番号<iput type="text" name="naisen"></li>
+    </ul>
+  </body>
 </html>
