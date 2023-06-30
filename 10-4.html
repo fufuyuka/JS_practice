@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>要素の内容の操作</title>
+  
+  <script>
+    function showImage() {
+      var htmlstr = "";
+      for(var i=1; i<=3; i++) {
+        htmlstr += "<img src='images/frog" + i + ".jpg'>";
+      }
+      document.getElementById("imageArea").innerHTML = htmlstr;
+    }
+  </script>
+  
+</head>
+<body>
+  <button id="btn" onclick="showImage();">読込</button>
+  <div id="imageArea">ここに画像が読み込まれます。</div>
+</body>
+
+<p>※練習なので読み込み画像の配置は無し</p>
+</html>
